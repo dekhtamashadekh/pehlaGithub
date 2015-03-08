@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="10" name="chrome3" parallel="classes">
+	<listeners>
+
+	</listeners>
+
+	<parameter name="wrongPassword" value="XXXPassword!1234" />
+	<test name="Test3">
+		<classes>
+			<class name="com.github.selenium.Tests.Cp3Test" />
+			<class name="com.github.selenium.Tests.Cp3CommTest" />
+			<class name="com.github.selenium.Tests.ConcreteLoginTest" />
+			<class name="com.github.selenium.Tests.Cp3PlanTest" />
+			
+		</classes>
+	</test>
+</suite>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="5" name="firefox" parallel="classes">
+	<listeners>
+
+		<listener class-name="com.github.selenium.MyMainReporter" />
+		<listener class-name="com.github.selenium.RetryListener" />
+		<listener class-name="com.github.selenium.TestScreenshotListener" />
+		<listener class-name="com.github.selenium.AdjustFailedTest" />
+		
+
+
+	</listeners>
+
+
+	<parameter name="wrongPassword" value="XXPassword!1234" />
+	<test name="firefox">
+		<classes>
+			<class name="com.github.selenium.Tests.Cp3Test" />
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->

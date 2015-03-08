@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="My suite" parallel="classes" thread-count="10">
+	<listeners>
+
+
+		<listener class-name="com.github.selenium.MyMainReporter" />
+		<listener class-name="com.github.selenium.RetryListener" />
+		<listener class-name="com.github.selenium.TestScreenshotListener" />
+
+
+
+
+
+	</listeners>
+
+	<parameter name="browser" value="firefox" />
+
+	<parameter name="website" value="https://awebsite" />
+
+	<parameter name="username" value="autouser@autouser.com" />
+
+	<parameter name="password" value="Password!1234" />
+
+	<parameter name="wrongPassword" value="XXPassword!1234" />
+
+
+	<test name="Test3">
+		<packages>
+
+			<package name="com.github.selenium.Tests" />
+
+		</packages>
+
+
+	</test> <!-- Test -->
+
+</suite> <!-- Suite -->
