@@ -9,7 +9,7 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import com.github.selenium.TestSeleniumBase;
-import com.github.selenium.PageObjects.ConcreteLoginPage;
+import com.github.selenium.PageObjects.LoginPage;
 import com.github.selenium.PageObjects.Cp3AddNewPage;
 import com.github.selenium.PageObjects.Cp3AddStoryPage;
 import com.github.selenium.PageObjects.Cp3DeletePage;
@@ -35,9 +35,9 @@ public class Cp3Test extends TestSeleniumBase {
 
 		getDriverObject().get(website);
 
-		ConcreteLoginPage concreteLoginPage = new ConcreteLoginPage();
+		LoginPage LoginPage = new LoginPage();
 
-		LandingPage landingPage = concreteLoginPage.login(username, password);
+		LandingPage landingPage = LoginPage.login(username, password);
 
 		Cp3RhsPage cp3RhsPage = landingPage.getCp3RhsPage();
 
@@ -81,9 +81,9 @@ public class Cp3Test extends TestSeleniumBase {
 
 		getDriverObject().get(website);
 
-		ConcreteLoginPage concreteLoginPage = new ConcreteLoginPage();
+		LoginPage LoginPage = new LoginPage();
 
-		LandingPage landingPage = concreteLoginPage.login(username, password);
+		LandingPage landingPage = LoginPage.login(username, password);
 
 		Cp3LhsPage cp3LhsPage = landingPage.getCp3LhsPage();
 
@@ -117,9 +117,9 @@ public class Cp3Test extends TestSeleniumBase {
 
 		getDriverObject().get(website);
 
-		ConcreteLoginPage concreteLoginPage = new ConcreteLoginPage();
+		LoginPage LoginPage = new LoginPage();
 
-		LandingPage landingPage = concreteLoginPage.login(username, password);
+		LandingPage landingPage = LoginPage.login(username, password);
 
 		Cp3RhsPage cp3RhsPage = landingPage.getCp3RhsPage();
 
@@ -142,9 +142,9 @@ public class Cp3Test extends TestSeleniumBase {
 
 		getDriverObject().get(website);
 
-		ConcreteLoginPage concreteLoginPage = new ConcreteLoginPage();
+		LoginPage LoginPage = new LoginPage();
 
-		LandingPage landingPage = concreteLoginPage.login(username, password);
+		LandingPage landingPage = LoginPage.login(username, password);
 
 		Cp3LhsPage cp3LhsPage = landingPage.getCp3LhsPage();
 
@@ -168,9 +168,9 @@ public class Cp3Test extends TestSeleniumBase {
 
 		getDriverObject().get(website);
 
-		ConcreteLoginPage concreteLoginPage = new ConcreteLoginPage();
+		LoginPage LoginPage = new LoginPage();
 
-		LandingPage landingPage = concreteLoginPage.login(username, password);
+		LandingPage landingPage = LoginPage.login(username, password);
 
 		Cp3RhsPage cp3RhsPage = landingPage.getCp3RhsPage();
 
@@ -230,9 +230,9 @@ public class Cp3Test extends TestSeleniumBase {
 
 		getDriverObject().get(website);
 
-		ConcreteLoginPage concreteLoginPage = new ConcreteLoginPage();
+		LoginPage LoginPage = new LoginPage();
 
-		LandingPage landingPage = concreteLoginPage.login(username, password);
+		LandingPage landingPage = LoginPage.login(username, password);
 
 		Cp3RhsPage cp3RhsPage = landingPage.getCp3RhsPage();
 

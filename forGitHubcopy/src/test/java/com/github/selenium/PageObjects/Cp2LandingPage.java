@@ -64,9 +64,9 @@ public class Cp2LandingPage extends LoadableComponent<Cp2LandingPage> {
 	}
 
 	/**
-	 * @return an instance of Concrete Admin Page
+	 * @return an instance of  Admin Page
 	 */
-	public ConcreteAdminPage getConcreteAdminPage() {
+	public AdminPage getAdminPage() {
 
 		getDriverObject().switchTo().defaultContent();
 
@@ -74,7 +74,7 @@ public class Cp2LandingPage extends LoadableComponent<Cp2LandingPage> {
 
 		this.AdminTab.click();
 
-		return new ConcreteAdminPage();
+		return new AdminPage();
 
 	}
 

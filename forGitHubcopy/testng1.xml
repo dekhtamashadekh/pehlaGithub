@@ -10,7 +10,7 @@
 		<classes>
 			<class name="com.github.selenium.Tests.Cp3Test" />
 			<class name="com.github.selenium.Tests.Cp3CommTest" />
-			<class name="com.github.selenium.Tests.ConcreteLoginTest" />
+			<class name="com.github.selenium.Tests.LoginTest" />
 			<class name="com.github.selenium.Tests.Cp3PlanTest" />
 			
 		</classes>

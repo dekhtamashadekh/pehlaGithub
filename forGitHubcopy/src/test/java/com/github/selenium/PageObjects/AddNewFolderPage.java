@@ -18,7 +18,7 @@ import org.openqa.selenium.support.ui.LoadableComponent;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 /**
- * @author dtyagi Class to represent Concrete CP2 Add New Folder Page
+ * @author dtyagi Class to represent  CP2 Add New Folder Page
  * 
  */
 public class AddNewFolderPage extends LoadableComponent<AddNewFolderPage> {

@@ -13,7 +13,7 @@ import org.testng.annotations.Test;
 
 import com.github.selenium.TestSeleniumBase;
 import com.github.selenium.PageObjects.AddNewFolderPage;
-import com.github.selenium.PageObjects.ConcreteLoginPage;
+import com.github.selenium.PageObjects.LoginPage;
 import com.github.selenium.PageObjects.Cp2FolderPage;
 import com.github.selenium.PageObjects.Cp2LandingPage;
 import com.github.selenium.PageObjects.Cp2UploadFilePage;
@@ -42,11 +42,11 @@ public class Cp2FolderTest extends TestSeleniumBase {
 
 		getDriverObject().get(website);
 
-		ConcreteLoginPage concreteLoginPage = new ConcreteLoginPage();
+		LoginPage LoginPage = new LoginPage();
 
-		concreteLoginPage.get();
+		LoginPage.get();
 
-		LandingPage landingPage = concreteLoginPage.login(username, password);
+		LandingPage landingPage = LoginPage.login(username, password);
 		landingPage.get();
 
 		Cp2LandingPage cp2LandingPage = landingPage.getCp2LandingPage();
@@ -80,10 +80,10 @@ public class Cp2FolderTest extends TestSeleniumBase {
 
 		getDriverObject().get(website);
 
-		ConcreteLoginPage concreteLoginPage = new ConcreteLoginPage();
-		concreteLoginPage.get();
+		LoginPage LoginPage = new LoginPage();
+		LoginPage.get();
 
-		LandingPage landingPage = concreteLoginPage.login(username, password);
+		LandingPage landingPage = LoginPage.login(username, password);
 		landingPage.get();
 
 		Cp2LandingPage cp2LandingPage = landingPage.getCp2LandingPage();
@@ -126,10 +126,10 @@ public class Cp2FolderTest extends TestSeleniumBase {
 
 		getDriverObject().get(website);
 
-		ConcreteLoginPage concreteLoginPage = new ConcreteLoginPage();
-		concreteLoginPage.get();
+		LoginPage LoginPage = new LoginPage();
+		LoginPage.get();
 
-		LandingPage landingPage = concreteLoginPage.login(username, password);
+		LandingPage landingPage = LoginPage.login(username, password);
 		landingPage.get();
 
 		Cp2LandingPage cp2LandingPage = landingPage.getCp2LandingPage();
@@ -169,10 +169,10 @@ public class Cp2FolderTest extends TestSeleniumBase {
 
 		getDriverObject().get(website);
 
-		ConcreteLoginPage concreteLoginPage = new ConcreteLoginPage();
-		concreteLoginPage.get();
+		LoginPage LoginPage = new LoginPage();
+		LoginPage.get();
 
-		LandingPage landingPage = concreteLoginPage.login(username, password);
+		LandingPage landingPage = LoginPage.login(username, password);
 		landingPage.get();
 
 		Cp2LandingPage cp2LandingPage = landingPage.getCp2LandingPage();
@@ -215,10 +215,10 @@ public class Cp2FolderTest extends TestSeleniumBase {
 
 		getDriverObject().get(website);
 
-		ConcreteLoginPage concreteLoginPage = new ConcreteLoginPage();
-		concreteLoginPage.get();
+		LoginPage LoginPage = new LoginPage();
+		LoginPage.get();
 
-		LandingPage landingPage = concreteLoginPage.login(username, password);
+		LandingPage landingPage = LoginPage.login(username, password);
 		landingPage.get();
 
 		Cp2LandingPage cp2LandingPage = landingPage.getCp2LandingPage();

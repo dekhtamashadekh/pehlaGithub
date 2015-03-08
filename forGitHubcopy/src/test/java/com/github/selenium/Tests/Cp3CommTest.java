@@ -8,7 +8,7 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import com.github.selenium.TestSeleniumBase;
-import com.github.selenium.PageObjects.ConcreteLoginPage;
+import com.github.selenium.PageObjects.LoginPage;
 import com.github.selenium.PageObjects.Cp3AddCommPage;
 import com.github.selenium.PageObjects.Cp3AddStore1Page;
 import com.github.selenium.PageObjects.Cp3AddStore2Page;
@@ -26,9 +26,9 @@ public class Cp3CommTest extends TestSeleniumBase {
 
 		getDriverObject().get(website);
 
-		ConcreteLoginPage concreteLoginPage = new ConcreteLoginPage();
+		LoginPage LoginPage = new LoginPage();
 
-		LandingPage landingPage = concreteLoginPage.login(username, password);
+		LandingPage landingPage = LoginPage.login(username, password);
 
 		getDriverObject().get(website + "core/root/index.cfm?pageId=storeComms&page_layout=vintage");
 
@@ -50,9 +50,9 @@ public class Cp3CommTest extends TestSeleniumBase {
 
 		getDriverObject().get(website);
 
-		ConcreteLoginPage concreteLoginPage = new ConcreteLoginPage();
+		LoginPage LoginPage = new LoginPage();
 
-		LandingPage landingPage = concreteLoginPage.login(username, password);
+		LandingPage landingPage = LoginPage.login(username, password);
 
 		getDriverObject().get(website + "core/root/index.cfm?pageId=storeComms&page_layout=vintage");
 
@@ -74,9 +74,9 @@ public class Cp3CommTest extends TestSeleniumBase {
 
 		getDriverObject().get(website);
 
-		ConcreteLoginPage concreteLoginPage = new ConcreteLoginPage();
+		LoginPage LoginPage = new LoginPage();
 
-		LandingPage landingPage = concreteLoginPage.login(username, password);
+		LandingPage landingPage = LoginPage.login(username, password);
 
 		getDriverObject().get(website + "core/root/index.cfm?pageId=storeComms&page_layout=vintage");
 
@@ -105,9 +105,9 @@ public class Cp3CommTest extends TestSeleniumBase {
 
 		getDriverObject().get(website);
 
-		ConcreteLoginPage concreteLoginPage = new ConcreteLoginPage();
+		LoginPage LoginPage = new LoginPage();
 
-		LandingPage landingPage = concreteLoginPage.login(username, password);
+		LandingPage landingPage = LoginPage.login(username, password);
 
 		getDriverObject().get(website + "core/root/index.cfm?pageId=storeComms&page_layout=vintage");
 
@@ -136,9 +136,9 @@ public class Cp3CommTest extends TestSeleniumBase {
 
 		getDriverObject().get(website);
 
-		ConcreteLoginPage concreteLoginPage = new ConcreteLoginPage();
+		LoginPage LoginPage = new LoginPage();
 
-		LandingPage landingPage = concreteLoginPage.login(username, password);
+		LandingPage landingPage = LoginPage.login(username, password);
 
 		getDriverObject().get(website + "core/root/index.cfm?pageId=storeComms&page_layout=vintage");
 

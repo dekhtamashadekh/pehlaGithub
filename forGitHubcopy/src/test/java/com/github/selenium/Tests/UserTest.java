@@ -6,8 +6,8 @@ import org.testng.annotations.Parameters;
 
 import com.github.selenium.TestSeleniumBase;
 import com.github.selenium.PageObjects.AddUserPage;
-import com.github.selenium.PageObjects.ConcreteAdminPage;
-import com.github.selenium.PageObjects.ConcreteLoginPage;
+import com.github.selenium.PageObjects.AdminPage;
+import com.github.selenium.PageObjects.LoginPage;
 import com.github.selenium.PageObjects.Cp2LandingPage;
 import com.github.selenium.PageObjects.LandingPage;
 import com.github.selenium.PageObjects.UserPage;
@@ -33,11 +33,11 @@ public class UserTest extends TestSeleniumBase {
 
 		getDriverObject().get(website);
 
-		ConcreteLoginPage concreteLoginPage = new ConcreteLoginPage();
-		concreteLoginPage.get();
+		LoginPage LoginPage = new LoginPage();
+		LoginPage.get();
 
 
-		LandingPage landingPage = concreteLoginPage.login(username, password);
+		LandingPage landingPage = LoginPage.login(username, password);
 
 		landingPage.get();
 		
@@ -49,19 +49,19 @@ public class UserTest extends TestSeleniumBase {
 		
 		System.out.println("delete after use 2");
 
-		ConcreteAdminPage concreteAdminPage = cp2LandingPage.getConcreteAdminPage();
+		AdminPage AdminPage = cp2LandingPage.getAdminPage();
 		
 		System.out.println("delete after use 3");
 
-		concreteAdminPage.get();
+		AdminPage.get();
 
-		AddUserPage addUserPage = concreteAdminPage.getAddUserPage();
+		AddUserPage addUserPage = AdminPage.getAddUserPage();
 
 		addUserPage.get();
 
 		addUserPage.addUser();
 
-		UserPage userPage = concreteAdminPage.getUserPage();
+		UserPage userPage = AdminPage.getUserPage();
 		System.out.println("delete after use 4");
 
 		userPage.get();
@@ -87,19 +87,19 @@ public class UserTest extends TestSeleniumBase {
 
 		getDriverObject().get(website);
 
-		ConcreteLoginPage concreteLoginPage = new ConcreteLoginPage();
+		LoginPage LoginPage = new LoginPage();
 
-		LandingPage landingPage = concreteLoginPage.login(username, password);
+		LandingPage landingPage = LoginPage.login(username, password);
 
 		Cp2LandingPage cp2LandingPage = landingPage.getCp2LandingPage();
 
-		ConcreteAdminPage concreteAdminPage = cp2LandingPage.getConcreteAdminPage();
+		AdminPage AdminPage = cp2LandingPage.getAdminPage();
 
-		AddUserPage addUserPage = concreteAdminPage.getAddUserPage();
+		AddUserPage addUserPage = AdminPage.getAddUserPage();
 
 		addUserPage.addUser();
 
-		UserPage userPage = concreteAdminPage.getUserPage();
+		UserPage userPage = AdminPage.getUserPage();
 
 		userPage.get();
 

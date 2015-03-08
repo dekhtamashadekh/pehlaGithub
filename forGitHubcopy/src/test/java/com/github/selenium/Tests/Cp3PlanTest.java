@@ -6,7 +6,7 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import com.github.selenium.TestSeleniumBase;
-import com.github.selenium.PageObjects.ConcreteLoginPage;
+import com.github.selenium.PageObjects.LoginPage;
 import com.github.selenium.PageObjects.LandingPage;
 import com.github.selenium.PageObjects.PlanAddActivity1Page;
 import com.github.selenium.PageObjects.PlanCalendarPage;
@@ -21,9 +21,9 @@ public class Cp3PlanTest extends TestSeleniumBase {
 
 		getDriverObject().get(website);
 
-		ConcreteLoginPage concreteLoginPage = new ConcreteLoginPage();
+		LoginPage LoginPage = new LoginPage();
 
-		LandingPage landingPage = concreteLoginPage.login(username, password);
+		LandingPage landingPage = LoginPage.login(username, password);
 
 		getDriverObject().get(website + "core/root/index.cfm?pageId=planner&home=homePage");
 
@@ -51,9 +51,9 @@ public class Cp3PlanTest extends TestSeleniumBase {
 		
 		getDriverObject().get(website);
 
-		ConcreteLoginPage concreteLoginPage = new ConcreteLoginPage();
+		LoginPage LoginPage = new LoginPage();
 
-		LandingPage landingPage = concreteLoginPage.login(username, password);
+		LandingPage landingPage = LoginPage.login(username, password);
 
 		getDriverObject().get(website + "core/root/index.cfm?pageId=planner&home=homePage");
 
@@ -80,9 +80,9 @@ public class Cp3PlanTest extends TestSeleniumBase {
 
 		getDriverObject().get(website);
 
-		ConcreteLoginPage concreteLoginPage = new ConcreteLoginPage();
+		LoginPage LoginPage = new LoginPage();
 
-		LandingPage landingPage = concreteLoginPage.login(username, password);
+		LandingPage landingPage = LoginPage.login(username, password);
 
 		getDriverObject().get(
 				website + "core/root/index.cfm?pageId=planner&home=homePage");

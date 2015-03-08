@@ -10,7 +10,7 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import com.github.selenium.TestSeleniumBase;
-import com.github.selenium.PageObjects.ConcreteLoginPage;
+import com.github.selenium.PageObjects.LoginPage;
 import com.github.selenium.PageObjects.LandingPage;
 import com.github.selenium.Utility.FileDownloader;
 
@@ -35,10 +35,10 @@ public class Cp3DownloadTest extends TestSeleniumBase {
 
 		getDriverObject().get(website);
 
-		ConcreteLoginPage concreteLoginPage = new ConcreteLoginPage();
-		concreteLoginPage.get();
+		LoginPage LoginPage = new LoginPage();
+		LoginPage.get();
 
-		LandingPage landingPage = concreteLoginPage.login(username, password);
+		LandingPage landingPage = LoginPage.login(username, password);
 		landingPage.get();
 
 		FileDownloader fileDownloader = new FileDownloader(getDriverObject());

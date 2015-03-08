@@ -7,8 +7,8 @@ import org.testng.annotations.Test;
 
 import com.github.selenium.TestSeleniumBase;
 import com.github.selenium.PageObjects.AddGroupPage;
-import com.github.selenium.PageObjects.ConcreteAdminPage;
-import com.github.selenium.PageObjects.ConcreteLoginPage;
+import com.github.selenium.PageObjects.AdminPage;
+import com.github.selenium.PageObjects.LoginPage;
 import com.github.selenium.PageObjects.Cp2LandingPage;
 import com.github.selenium.PageObjects.LandingPage;
 
@@ -33,20 +33,20 @@ public class AddUserGroupDeleteUserGroupTest extends TestSeleniumBase {
 
 		getDriverObject().get(website);
 
-		ConcreteLoginPage concreteLoginPage = new ConcreteLoginPage();
-		concreteLoginPage.get();
+		LoginPage LoginPage = new LoginPage();
+		LoginPage.get();
 
-		LandingPage landingPage = concreteLoginPage.login(username, password);
+		LandingPage landingPage = LoginPage.login(username, password);
 
 		landingPage.get();
 
 		Cp2LandingPage cp2LandingPage = landingPage.getCp2LandingPage();
 		cp2LandingPage.get();
 
-		ConcreteAdminPage concreteAdminPage = cp2LandingPage.getConcreteAdminPage();
-		concreteAdminPage.get();
+		AdminPage AdminPage = cp2LandingPage.getAdminPage();
+		AdminPage.get();
 
-		AddGroupPage addGroupPage = concreteAdminPage.getAddGroupPage();
+		AddGroupPage addGroupPage = AdminPage.getAddGroupPage();
 		addGroupPage.get();
 
 		addGroupPage.addUserGroup();
@@ -69,19 +69,19 @@ public class AddUserGroupDeleteUserGroupTest extends TestSeleniumBase {
 
 		getDriverObject().get(website);
 
-		ConcreteLoginPage concreteLoginPage = new ConcreteLoginPage();
-		concreteLoginPage.get();
+		LoginPage LoginPage = new LoginPage();
+		LoginPage.get();
 
-		LandingPage landingPage = concreteLoginPage.login(username, password);
+		LandingPage landingPage = LoginPage.login(username, password);
 		landingPage.get();
 
 		Cp2LandingPage cp2LandingPage = landingPage.getCp2LandingPage();
 		cp2LandingPage.get();
 
-		ConcreteAdminPage concreteAdminPage = cp2LandingPage.getConcreteAdminPage();
-		concreteAdminPage.get();
+		AdminPage AdminPage = cp2LandingPage.getAdminPage();
+		AdminPage.get();
 
-		AddGroupPage addGroupPage = concreteAdminPage.getAddGroupPage();
+		AddGroupPage addGroupPage = AdminPage.getAddGroupPage();
 		addGroupPage.get();
 
 		addGroupPage.addUserGroup();

@@ -92,7 +92,7 @@ public class MyMainReporter implements IReporter {
 		String className = element.getClassName();
 		String methodName = element.getMethodName();
 
-		System.out.println("report is printed at http://svnserver01.internal.concrete-media.co.uk:8081/job/"+  _prop.getString("jenkinsProjectName") + "/ws/automation/" +  _prop.getString("jenkinsProjectName") + testReportTimeStamp);
+		
 
 		return new PrintWriter(new BufferedWriter(new FileWriter(new File(reportDirectory, _prop.getString("jenkinsProjectName") + testReportTimeStamp))));
 
@@ -453,7 +453,7 @@ public class MyMainReporter implements IReporter {
 		out.println("<head>");
 
 		out.println("<body>");
-		out.println("<br /><img src=\"/files/logo-main-default.png\" alt =\"Concrete Media Ltd\" />");
+		out.println("<br /><img src=\"/files/logo-main-default.png\" alt =\" Media Ltd\" />");
 		out.println("<br /><br />");
 
 		out.println("<script src=\"/lib/myjquery.js\">");
