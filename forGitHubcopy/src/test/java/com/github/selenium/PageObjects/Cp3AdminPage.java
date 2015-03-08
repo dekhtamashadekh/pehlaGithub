@@ -14,10 +14,10 @@ import org.openqa.selenium.support.PageFactory;
 import com.github.selenium.PageLoadConditions;
 
 /**
- * @author dtyagi
+ * @author 
  * 
  */
-public class Cp3AdminPage extends PageLoadConditions {
+public class AdminPage extends PageLoadConditions {
 
 	@FindBy(how = How.LINK_TEXT, using = "User Management")
 	WebElement UserManagement;
@@ -37,7 +37,7 @@ public class Cp3AdminPage extends PageLoadConditions {
 	
 	
 
-	public Cp3AdminPage() {
+	public AdminPage() {
 
 		PageFactory.initElements(getDriverObject(), this);
 		this.get();
@@ -79,13 +79,13 @@ public class Cp3AdminPage extends PageLoadConditions {
 	/**
 	 * @return an instance of Add User Group page
 	 */
-	public Cp3UserGroupPage getCp3UserGroupPage() {
+	public UserGroupPage getUserGroupPage() {
 
 		this.UserManagement.click();
 
 		this.UserGroups.click();
 
-		return new Cp3UserGroupPage();
+		return new UserGroupPage();
 	}
 
 }

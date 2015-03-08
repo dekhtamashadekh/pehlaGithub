@@ -6,7 +6,7 @@
     <classes>
      
  
-      <class name="com.github.selenium.Tests.Cp3DownloadTest"/>
+      <class name="com.github.selenium.Tests.DownloadTest"/>
     </classes>
   </test> <!-- Test -->
   

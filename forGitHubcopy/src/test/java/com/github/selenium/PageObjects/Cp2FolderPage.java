@@ -16,10 +16,10 @@ import org.openqa.selenium.support.ui.LoadableComponent;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 /**
- * @author dtyagi Class to represent Cp2 Folder Page
+ * @author  Class to represent  Folder Page
  * 
  */
-public class Cp2FolderPage extends LoadableComponent<Cp2FolderPage> {
+public class FolderPage extends LoadableComponent<FolderPage> {
 
 	@FindBy(how = How.ID, using = "MainScreen")
 	WebElement MainScreenFrame;
@@ -45,7 +45,7 @@ public class Cp2FolderPage extends LoadableComponent<Cp2FolderPage> {
 	/**
 	 * 
 	 */
-	public Cp2FolderPage() {
+	public FolderPage() {
 
 		PageFactory.initElements(getDriverObject(), this);
 	}
@@ -104,13 +104,13 @@ public class Cp2FolderPage extends LoadableComponent<Cp2FolderPage> {
 	}
 
 	/**
-	 * @return This method returns and instance of CP2 Upload File Page
+	 * @return This method returns and instance of  Upload File Page
 	 */
-	public Cp2UploadFilePage getCp2UploadFilePage() {
+	public UploadFilePage getUploadFilePage() {
 
 		this.AddNewItem.click();
 
-		return new Cp2UploadFilePage();
+		return new UploadFilePage();
 
 	}
 

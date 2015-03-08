@@ -17,7 +17,7 @@ import com.github.selenium.AdvancedSelect;
 import com.github.selenium.PageLoadConditions;
 
 /**
- * @author dtyagi
+ * @author 
  * 
  */
 public class PlanAddActivity1Page extends PageLoadConditions {

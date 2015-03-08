@@ -8,10 +8,10 @@
 	<parameter name="wrongPassword" value="XXXPassword!1234" />
 	<test name="Test3">
 		<classes>
-			<class name="com.github.selenium.Tests.Cp3Test" />
-			<class name="com.github.selenium.Tests.Cp3CommTest" />
+			<class name="com.github.selenium.Tests.Test" />
+			<class name="com.github.selenium.Tests.CommTest" />
 			<class name="com.github.selenium.Tests.LoginTest" />
-			<class name="com.github.selenium.Tests.Cp3PlanTest" />
+			<class name="com.github.selenium.Tests.PlanTest" />
 			
 		</classes>
 	</test>

@@ -20,7 +20,7 @@ import org.openqa.selenium.support.ui.LoadableComponent;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 /**
- * @author dtyagi Class to represent Test Zone Page
+ * @author  Class to represent Test Zone Page
  * 
  */
 public class TestZonePage extends LoadableComponent<TestZonePage> {
@@ -95,11 +95,11 @@ public class TestZonePage extends LoadableComponent<TestZonePage> {
 	}
 
 	/**
-	 * Adds CP2 folder
+	 * Adds  folder
 	 * 
 	 * @throws InterruptedException
 	 */
-	public void addCp2Folder() throws InterruptedException {
+	public void addFolder() throws InterruptedException {
 
 		getDriverObject().switchTo().defaultContent();
 
@@ -149,9 +149,9 @@ public class TestZonePage extends LoadableComponent<TestZonePage> {
 
 	/**
 	 * @param timestamp
-	 * @return an instance of Cp2FolderPage
+	 * @return an instance of FolderPage
 	 */
-	public Cp2FolderPage getCP2FolderPage(String timestamp) {
+	public FolderPage getFolderPage(String timestamp) {
 
 		getDriverObject().switchTo().defaultContent();
 
@@ -160,7 +160,7 @@ public class TestZonePage extends LoadableComponent<TestZonePage> {
 		//getDriverObject().findElement(By.partialLinkText("TestAutoFolder" + testZonePageTimeStamp)).click();
 		getDriverObject().findElement(By.partialLinkText("TestAutoFolder" + timestamp)).click();
 
-		return new Cp2FolderPage();
+		return new FolderPage();
 	}
 
 }

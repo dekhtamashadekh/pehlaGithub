@@ -13,7 +13,7 @@ import com.github.selenium.PageObjects.PlanCalendarPage;
 import com.github.selenium.PageObjects.PlanListPage;
 import com.github.selenium.PageObjects.PlanSavePage;
 
-public class Cp3PlanTest extends TestSeleniumBase {
+public class PlanTest extends TestSeleniumBase {
 
 	@Test(groups = { "noSafari" })
 	@Parameters(value = { "website", "username", "password" })

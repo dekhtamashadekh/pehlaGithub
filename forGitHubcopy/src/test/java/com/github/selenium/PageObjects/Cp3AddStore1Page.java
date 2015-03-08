@@ -17,10 +17,10 @@ import com.github.selenium.AdvancedSelect;
 import com.github.selenium.PageLoadConditions;
 
 /**
- * @author dtyagi
+ * @author 
  * 
  */
-public class Cp3AddStore1Page extends PageLoadConditions {
+public class AddStore1Page extends PageLoadConditions {
 
 	@FindBy(how = How.ID, using = "store_name")
 	WebElement StoreName;
@@ -40,7 +40,7 @@ public class Cp3AddStore1Page extends PageLoadConditions {
 	@FindBy(how = How.ID, using = "btnSubmitStore")
 	WebElement Save;
 
-	public Cp3AddStore1Page() {
+	public AddStore1Page() {
 
 		PageFactory.initElements(getDriverObject(), this);
 		this.get();
@@ -79,7 +79,7 @@ public class Cp3AddStore1Page extends PageLoadConditions {
 
 	}
 
-	public Cp3AddStore2Page addStoreName(String name) {
+	public AddStore2Page addStoreName(String name) {
 
 		this.StoreName.sendKeys(name);
 
@@ -99,7 +99,7 @@ public class Cp3AddStore1Page extends PageLoadConditions {
 
 		//this.Save.click();
 
-		return new Cp3AddStore2Page();
+		return new AddStore2Page();
 
 	}
 

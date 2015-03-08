@@ -13,7 +13,7 @@ import org.testng.Reporter;
 import org.testng.TestListenerAdapter;
 
 /**
- * @author dtyagi
+ * @author 
  * 
  *         This is a TestNG listener class which takes screenshot at the time of
  *         failure

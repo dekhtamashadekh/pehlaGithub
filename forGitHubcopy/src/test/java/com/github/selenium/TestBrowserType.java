@@ -1,7 +1,7 @@
 package com.github.selenium;
 
 /**
- * @author dtyagi
+ * @author 
  *         This is class which stores all the browser types as enums and pass
  *         them to class configuring the selenium object to execute tests
  */

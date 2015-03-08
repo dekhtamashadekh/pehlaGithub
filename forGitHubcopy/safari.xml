@@ -13,7 +13,7 @@
             </run>
         </groups>
 		<classes>
-			<class name="com.github.selenium.Tests.Cp3Test" />
+			<class name="com.github.selenium.Tests.Test" />
 		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->

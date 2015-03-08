@@ -3,7 +3,7 @@ package com.github.selenium.Utility;
 import org.apache.http.client.methods.*;
 
 /**
- * @author dtyagi
+ * @author 
  *         This is the class which holds all the possible HTTP request types as
  *         enums
  * 

@@ -16,10 +16,10 @@ import org.openqa.selenium.support.PageFactory;
 import com.github.selenium.PageLoadConditions;
 
 /**
- * @author dtyagi
+ * @author 
  * 
  */
-public class Cp3SubfolderSelectorPanelPage extends PageLoadConditions {
+public class SubfolderSelectorPanelPage extends PageLoadConditions {
 
 	@FindBy(how = How.CLASS_NAME, using = "navigator-container")
 	WebElement SubFolderSelector;
@@ -27,7 +27,7 @@ public class Cp3SubfolderSelectorPanelPage extends PageLoadConditions {
 	@FindBy(how = How.CLASS_NAME, using = "navLink")
 	List<WebElement> SubFolders;
 
-	public Cp3SubfolderSelectorPanelPage() {
+	public SubfolderSelectorPanelPage() {
 		PageFactory.initElements(getDriverObject(), this);
 
 		this.get();
@@ -70,7 +70,7 @@ public class Cp3SubfolderSelectorPanelPage extends PageLoadConditions {
 	 * @return
 	 * @throws InterruptedException
 	 */
-	public Cp3FolderPage getCp3FolderPage(int subFolderNumber) throws InterruptedException {
+	public FolderPage getFolderPage(int subFolderNumber) throws InterruptedException {
 
 		//String scripToSelectSecondFolder = "jQuery('.navLink.vault')["+(--subFolderNumber)+"].click()";
 
@@ -82,7 +82,7 @@ public class Cp3SubfolderSelectorPanelPage extends PageLoadConditions {
 
 		folderSelectLink.click();
 
-		return new Cp3FolderPage();
+		return new FolderPage();
 
 	}
 

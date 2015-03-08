@@ -16,10 +16,10 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import com.github.selenium.PageLoadConditions;
 
 /**
- * @author dtyagi
+ * @author 
  * 
  */
-public class Cp3DraftPage extends PageLoadConditions {
+public class DraftPage extends PageLoadConditions {
 
 	@FindBy(how = How.LINK_TEXT, using = "Add Story")
 	WebElement AddStoryLink;
@@ -51,7 +51,7 @@ public class Cp3DraftPage extends PageLoadConditions {
 	@FindBy(how = How.CSS, using = "#sharePanel > div.handle")
 	WebElement rhsExpander;
 
-	public Cp3DraftPage() {
+	public DraftPage() {
 
 		PageFactory.initElements(getDriverObject(), this);
 		this.get();
@@ -95,11 +95,11 @@ public class Cp3DraftPage extends PageLoadConditions {
 	/**
 	 * @return
 	 */
-	public Cp3AddStoryPage getCp3AddStoryPage() {
+	public AddStoryPage getAddStoryPage() {
 
 		this.AddStoryLink.click();
 
-		return new Cp3AddStoryPage();
+		return new AddStoryPage();
 
 	}
 
@@ -107,25 +107,25 @@ public class Cp3DraftPage extends PageLoadConditions {
 	 * @return
 	 * @throws InterruptedException
 	 */
-	public Cp3PublishPage getCp3PublishPage() throws InterruptedException {
+	public PublishPage getPublishPage() throws InterruptedException {
 
 		Thread.sleep(300);
 
 		this.Publish.click();
 
-		return new Cp3PublishPage();
+		return new PublishPage();
 
 	}
 
-	public Cp3RenamePage getRenamePage() {
+	public RenamePage getRenamePage() {
 
 		RenamePage.click();
 
-		return new Cp3RenamePage();
+		return new RenamePage();
 
 	}
 
-	public Cp3DeletePage getDeletePage() throws InterruptedException {
+	public DeletePage getDeletePage() throws InterruptedException {
 
 		this.rhsExpander.click();
 
@@ -134,7 +134,7 @@ public class Cp3DraftPage extends PageLoadConditions {
 
 		this.DeletePage.click();
 
-		return new Cp3DeletePage();
+		return new DeletePage();
 
 	}
 

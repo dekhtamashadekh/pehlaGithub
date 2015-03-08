@@ -14,15 +14,15 @@ import org.openqa.selenium.support.PageFactory;
 import com.github.selenium.PageLoadConditions;
 
 /**
- * @author dtyagi
+ * @author 
  * 
  */
-public class Cp3GroupAddSuccessPage extends PageLoadConditions {
+public class GroupAddSuccessPage extends PageLoadConditions {
 	
 	@FindBy(how = How.CSS, using = "ui-dialog-buttonset.ui-button-text")
 	WebElement UserGroupOk;
 
-	public Cp3GroupAddSuccessPage() {
+	public GroupAddSuccessPage() {
 
 		PageFactory.initElements(getDriverObject(), this);
 		this.get();
@@ -51,11 +51,11 @@ public class Cp3GroupAddSuccessPage extends PageLoadConditions {
 
 	}
 	
-	public Cp3UserGroupPage pressOk() {
+	public UserGroupPage pressOk() {
 		
 		this.UserGroupOk.click();
 		
-		return new Cp3UserGroupPage();
+		return new UserGroupPage();
 	}
 
 }

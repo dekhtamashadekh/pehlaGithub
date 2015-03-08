@@ -15,10 +15,10 @@ import com.github.selenium.AdvancedSelect;
 import com.github.selenium.PageLoadConditions;
 
 /**
- * @author dtyagi
+ * @author 
  * 
  */
-public class Cp3AddStoryPage extends PageLoadConditions {
+public class AddStoryPage extends PageLoadConditions {
 
 	@FindBy(how = How.PARTIAL_LINK_TEXT, using = "Add Story")
 	WebElement AddStoryLink;
@@ -32,7 +32,7 @@ public class Cp3AddStoryPage extends PageLoadConditions {
 	@FindBy(how = How.ID, using = "add-new-story")
 	WebElement CreateButtonForAddNewStory;
 
-	public Cp3AddStoryPage() {
+	public AddStoryPage() {
 
 		PageFactory.initElements(getDriverObject(), this);
 		this.get();
@@ -70,7 +70,7 @@ public class Cp3AddStoryPage extends PageLoadConditions {
 	/**
 	 * @return
 	 */
-	public Cp3DraftPage addButtonStory() {
+	public DraftPage addButtonStory() {
 
 		new AdvancedSelect(this.NewStoryType).selectByIndex(1);
 
@@ -78,7 +78,7 @@ public class Cp3AddStoryPage extends PageLoadConditions {
 
 		this.CreateButtonForAddNewStory.click();
 
-		return new Cp3DraftPage();
+		return new DraftPage();
 
 	}
 

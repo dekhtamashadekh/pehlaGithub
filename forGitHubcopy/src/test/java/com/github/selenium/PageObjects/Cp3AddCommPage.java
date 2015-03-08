@@ -18,10 +18,10 @@ import com.github.selenium.AdvancedSelect;
 import com.github.selenium.PageLoadConditions;
 
 /**
- * @author dtyagi
+ * @author 
  * 
  */
-public class Cp3AddCommPage extends PageLoadConditions {
+public class AddCommPage extends PageLoadConditions {
 
 	@FindBy(how = How.ID, using = "department_id")
 	WebElement From;
@@ -41,7 +41,7 @@ public class Cp3AddCommPage extends PageLoadConditions {
 	@FindBy(how = How.XPATH, using = "(//button[@name='btnSubmitComm'])[2]")
 	WebElement SavePublish;
 
-	public Cp3AddCommPage() {
+	public AddCommPage() {
 
 		PageFactory.initElements(getDriverObject(), this);
 		this.get();
@@ -81,7 +81,7 @@ public class Cp3AddCommPage extends PageLoadConditions {
 
 	}
 
-	public Cp3CommPage addAnnouncement(int name, String date) {
+	public CommPage addAnnouncement(int name, String date) {
 
 		new AdvancedSelect(this.From).selectByIndex(02);
 
@@ -108,7 +108,7 @@ public class Cp3AddCommPage extends PageLoadConditions {
 
 		this.SavePublish.click();
 
-		return new Cp3CommPage();
+		return new CommPage();
 
 	}
 

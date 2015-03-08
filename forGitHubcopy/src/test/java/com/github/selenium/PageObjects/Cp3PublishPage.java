@@ -14,10 +14,10 @@ import org.openqa.selenium.support.PageFactory;
 import com.github.selenium.PageLoadConditions;
 
 /**
- * @author dtyagi
+ * @author 
  * 
  */
-public class Cp3PublishPage extends PageLoadConditions {
+public class PublishPage extends PageLoadConditions {
 
 	@FindBy(how = How.PARTIAL_LINK_TEXT, using = "Add Story")
 	WebElement AddStoryLink;
@@ -34,7 +34,7 @@ public class Cp3PublishPage extends PageLoadConditions {
 	@FindBy(how = How.CSS, using = ".modal-backdrop.fade.in")
 	WebElement PublishModalDialouge;
 
-	public Cp3PublishPage() {
+	public PublishPage() {
 
 		PageFactory.initElements(getDriverObject(), this);
 
@@ -70,13 +70,13 @@ public class Cp3PublishPage extends PageLoadConditions {
 	 * @return
 	 * @throws InterruptedException
 	 */
-	public Cp3PublishedPage getCp3PublishedPage() throws InterruptedException {
+	public PublishedPage getPublishedPage() throws InterruptedException {
 
 		this.OkPublishButton.click();
 
 		Thread.sleep(300);
 
-		return new Cp3PublishedPage();
+		return new PublishedPage();
 
 	}
 

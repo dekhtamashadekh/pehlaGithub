@@ -39,7 +39,7 @@ import com.gargoylesoftware.htmlunit.javascript.host.Console;
  * Reported designed to render self-contained HTML top down view of a testing
  * suite.
  * 
- * @author Paul Mendelson (Edited by dtyagi to override some methods to create
+ * @author Paul Mendelson (Edited by  to override some methods to create
  *         more consumable test reports. Like time stamping the test report so
  *         it doesn't get overwritten.
  * @since 5.2

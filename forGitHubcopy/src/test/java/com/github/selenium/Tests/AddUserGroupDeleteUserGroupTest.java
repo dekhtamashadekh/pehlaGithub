@@ -9,11 +9,11 @@ import com.github.selenium.TestSeleniumBase;
 import com.github.selenium.PageObjects.AddGroupPage;
 import com.github.selenium.PageObjects.AdminPage;
 import com.github.selenium.PageObjects.LoginPage;
-import com.github.selenium.PageObjects.Cp2LandingPage;
+import com.github.selenium.PageObjects.LandingPage;
 import com.github.selenium.PageObjects.LandingPage;
 
 /**
- * @author dtyagi
+ * @author 
  * 
  */
 public class AddUserGroupDeleteUserGroupTest extends TestSeleniumBase {
@@ -40,10 +40,10 @@ public class AddUserGroupDeleteUserGroupTest extends TestSeleniumBase {
 
 		landingPage.get();
 
-		Cp2LandingPage cp2LandingPage = landingPage.getCp2LandingPage();
-		cp2LandingPage.get();
+		LandingPage LandingPage = landingPage.getLandingPage();
+		LandingPage.get();
 
-		AdminPage AdminPage = cp2LandingPage.getAdminPage();
+		AdminPage AdminPage = LandingPage.getAdminPage();
 		AdminPage.get();
 
 		AddGroupPage addGroupPage = AdminPage.getAddGroupPage();
@@ -75,10 +75,10 @@ public class AddUserGroupDeleteUserGroupTest extends TestSeleniumBase {
 		LandingPage landingPage = LoginPage.login(username, password);
 		landingPage.get();
 
-		Cp2LandingPage cp2LandingPage = landingPage.getCp2LandingPage();
-		cp2LandingPage.get();
+		LandingPage LandingPage = landingPage.getLandingPage();
+		LandingPage.get();
 
-		AdminPage AdminPage = cp2LandingPage.getAdminPage();
+		AdminPage AdminPage = LandingPage.getAdminPage();
 		AdminPage.get();
 
 		AddGroupPage addGroupPage = AdminPage.getAddGroupPage();

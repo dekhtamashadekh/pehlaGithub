@@ -18,10 +18,10 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import com.github.selenium.PageLoadConditions;
 
 /**
- * @author dtyagi
+ * @author 
  * 
  */
-public class Cp3DeletePage extends PageLoadConditions {
+public class DeletePage extends PageLoadConditions {
 
 	@FindBy(how = How.XPATH, using = "//div[@id='deletePage']/div/div[@class='modal-footer']/button[@id='delete-page']")
 	WebElement Delete;
@@ -32,7 +32,7 @@ public class Cp3DeletePage extends PageLoadConditions {
 	@FindBy(how = How.CSS, using = "#deletePage.in")
 	WebElement DeleteHeader2;
 
-	public Cp3DeletePage() {
+	public DeletePage() {
 
 		PageFactory.initElements(getDriverObject(), this);
 		this.get();

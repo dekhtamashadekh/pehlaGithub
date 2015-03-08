@@ -15,10 +15,10 @@ import org.openqa.selenium.support.PageFactory;
 import com.github.selenium.PageLoadConditions;
 
 /**
- * @author dtyagi
+ * @author 
  * 
  */
-public class Cp3CommPage extends PageLoadConditions {
+public class CommPage extends PageLoadConditions {
 	
 	@FindBy(how = How.ID, using = "storecommnavbutton1")
 	WebElement AddCommunication;
@@ -42,7 +42,7 @@ public class Cp3CommPage extends PageLoadConditions {
 	
 	
 
-	public Cp3CommPage() {
+	public CommPage() {
 
 		PageFactory.initElements(getDriverObject(), this);
 		this.get();
@@ -79,10 +79,10 @@ public class Cp3CommPage extends PageLoadConditions {
 
 	
 	
-	public Cp3AddCommPage getCp3AddCommPage() {
+	public AddCommPage getAddCommPage() {
 		this.AddCommunication.click();
 		
-		return new Cp3AddCommPage();
+		return new AddCommPage();
 	}
 	
 	public List<WebElement> searchCommunication(String name) {
@@ -96,10 +96,10 @@ public class Cp3CommPage extends PageLoadConditions {
 	}
 	
 	
-	public Cp3ManageStoresPage getCp3ManageStoresPage(){
+	public ManageStoresPage getManageStoresPage(){
 		
 		this.ManageStores.click();
-		return new Cp3ManageStoresPage();
+		return new ManageStoresPage();
 	}
 	
 	

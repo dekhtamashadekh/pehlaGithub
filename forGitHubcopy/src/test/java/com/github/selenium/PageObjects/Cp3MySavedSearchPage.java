@@ -15,15 +15,15 @@ import org.openqa.selenium.support.PageFactory;
 import com.github.selenium.PageLoadConditions;
 
 /**
- * @author dtyagi
+ * @author 
  * 
  */
-public class Cp3MySavedSearchPage extends PageLoadConditions {
+public class MySavedSearchPage extends PageLoadConditions {
 
 	@FindBy(how = How.ID, using = "mySavedSearches")
 	WebElement SavedSearchesModal;
 
-	public Cp3MySavedSearchPage() {
+	public MySavedSearchPage() {
 
 		PageFactory.initElements(getDriverObject(), this);
 
@@ -56,7 +56,7 @@ public class Cp3MySavedSearchPage extends PageLoadConditions {
 	/**
 	 * @param timeStamp
 	 */
-	public Cp3FolderPage applySavedSearch(String timeStamp) {
+	public FolderPage applySavedSearch(String timeStamp) {
 
 		String getApplyButton = "return jQuery(\"td:contains('" + timeStamp + "')\").siblings(jQuery(\"td\")).children().children(\"a:contains('Apply')\").get(0)";
 
@@ -64,7 +64,7 @@ public class Cp3MySavedSearchPage extends PageLoadConditions {
 
 		applyButton.click();
 
-		return new Cp3FolderPage();
+		return new FolderPage();
 
 	}
 

@@ -25,7 +25,7 @@ import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Parameters;
 
 /**
- * @author dtyagi
+ * @author 
  * 
  *         This is the master class where selenium( aka webdriver, aka driver)
  *         object is configured and a public getter method is provided so it can

@@ -15,10 +15,10 @@ import org.openqa.selenium.support.PageFactory;
 import com.github.selenium.PageLoadConditions;
 
 /**
- * @author dtyagi
+ * @author 
  * 
  */
-public class Cp3AddNewPage extends PageLoadConditions {
+public class AddNewPage extends PageLoadConditions {
 
 	@FindBy(how = How.ID, using = "page-title")
 	@CacheLookup
@@ -28,7 +28,7 @@ public class Cp3AddNewPage extends PageLoadConditions {
 	@CacheLookup
 	WebElement CreateButton;
 
-	public Cp3AddNewPage() {
+	public AddNewPage() {
 
 		PageFactory.initElements(getDriverObject(), this);
 		this.get();
@@ -63,7 +63,7 @@ public class Cp3AddNewPage extends PageLoadConditions {
 	 * @return
 	 * @throws InterruptedException
 	 */
-	public Cp3DraftPage getCp3DraftPage() throws InterruptedException {
+	public DraftPage getDraftPage() throws InterruptedException {
 
 		this.PageTitle.click();
 
@@ -73,7 +73,7 @@ public class Cp3AddNewPage extends PageLoadConditions {
 
 		this.CreateButton.click();
 
-		return new Cp3DraftPage();
+		return new DraftPage();
 	}
 
 	public void createPage(String name) throws InterruptedException {

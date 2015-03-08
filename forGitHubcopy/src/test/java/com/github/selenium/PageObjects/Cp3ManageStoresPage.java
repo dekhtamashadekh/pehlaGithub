@@ -15,10 +15,10 @@ import org.openqa.selenium.support.PageFactory;
 import com.github.selenium.PageLoadConditions;
 
 /**
- * @author dtyagi
+ * @author 
  * 
  */
-public class Cp3ManageStoresPage extends PageLoadConditions {
+public class ManageStoresPage extends PageLoadConditions {
 
 	@FindBy(how = How.ID, using = "btnAddStore")
 	WebElement AddStore;
@@ -29,7 +29,7 @@ public class Cp3ManageStoresPage extends PageLoadConditions {
 	@FindBy(how = How.ID, using = "filter")
 	WebElement Filter;
 
-	public Cp3ManageStoresPage() {
+	public ManageStoresPage() {
 
 		PageFactory.initElements(getDriverObject(), this);
 		this.get();
@@ -62,10 +62,10 @@ public class Cp3ManageStoresPage extends PageLoadConditions {
 
 	}
 
-	public Cp3AddStore1Page getCp3AddStore1Page() {
+	public AddStore1Page getAddStore1Page() {
 
 		this.AddStore.click();
-		return new Cp3AddStore1Page();
+		return new AddStore1Page();
 
 	}
 

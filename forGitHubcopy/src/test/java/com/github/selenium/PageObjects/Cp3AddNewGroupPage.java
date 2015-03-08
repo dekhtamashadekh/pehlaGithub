@@ -14,10 +14,10 @@ import org.openqa.selenium.support.PageFactory;
 import com.github.selenium.PageLoadConditions;
 
 /**
- * @author dtyagi
+ * @author 
  * 
  */
-public class Cp3AddNewGroupPage extends PageLoadConditions {
+public class AddNewGroupPage extends PageLoadConditions {
 
 	@FindBy(how = How.ID, using = "name")
 	WebElement UserGroupName;
@@ -28,7 +28,7 @@ public class Cp3AddNewGroupPage extends PageLoadConditions {
 	@FindBy(how = How.XPATH, using = "//button[@type='button']")
 	WebElement UserGroupSave;
 
-	public Cp3AddNewGroupPage() {
+	public AddNewGroupPage() {
 
 		PageFactory.initElements(getDriverObject(), this);
 		this.get();
@@ -61,7 +61,7 @@ public class Cp3AddNewGroupPage extends PageLoadConditions {
 
 	}
 
-	public Cp3GroupAddSuccessPage getCp3GroupAddSuccessPage() {
+	public GroupAddSuccessPage getGroupAddSuccessPage() {
 
 		this.UserGroupName.clear();
 
@@ -73,7 +73,7 @@ public class Cp3AddNewGroupPage extends PageLoadConditions {
 
 		this.UserGroupSave.click();
 
-		return new Cp3GroupAddSuccessPage();
+		return new GroupAddSuccessPage();
 
 	}
 

@@ -17,10 +17,10 @@ import com.github.selenium.PageLoadConditions;
 import com.github.selenium.TestSeleniumBase;
 
 /**
- * @author dtyagi
+ * @author 
  * 
  */
-public class Cp3RhsPage extends PageLoadConditions {
+public class RhsPage extends PageLoadConditions {
 
 	@FindBy(how = How.CSS, using = "a[href='#createNewPageModal']")
 	WebElement createNewPageLink;
@@ -28,7 +28,7 @@ public class Cp3RhsPage extends PageLoadConditions {
 	@FindBy(how = How.CSS, using = "#sharePanel.active")
 	WebElement PanelExpanded;
 
-	public Cp3RhsPage() {
+	public RhsPage() {
 		PageFactory.initElements(getDriverObject(), this);
 
 		this.get();
@@ -63,11 +63,11 @@ public class Cp3RhsPage extends PageLoadConditions {
 	 * @return
 	 * @throws InterruptedException
 	 */
-	public Cp3AddNewPage getCp3AddNewPage() throws InterruptedException {
+	public AddNewPage getAddNewPage() throws InterruptedException {
 
 		this.createNewPageLink.click();
 
-		return new Cp3AddNewPage();
+		return new AddNewPage();
 	}
 
 	/**
@@ -85,13 +85,13 @@ public class Cp3RhsPage extends PageLoadConditions {
 
 	}
 
-	public Cp3Page clickPageinRHS(String pageName) {
+	public Page clickPageinRHS(String pageName) {
 
 		getDriverObject().findElement(
 				By.xpath("//div/p/a[(contains(text(),'" + pageName + "'))]"))
 				.click();
 
-		return new Cp3Page();
+		return new Page();
 
 	}
 

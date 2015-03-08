@@ -17,14 +17,14 @@ import org.openqa.selenium.support.ui.LoadableComponent;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 /**
- * @author dtyagi
+ * @author 
  * 
  */
 public abstract class PageLoadConditions extends LoadableComponent<PageLoadConditions> {
 	
-	private String cp3AddNewPageTimeStamp;
+	private String AddNewPageTimeStamp;
 
-	private Date cp3AddNewPageTime = new Date();
+	private Date AddNewPageTime = new Date();
 
 	static Calendar cal = Calendar.getInstance();
 	
@@ -116,13 +116,13 @@ public abstract class PageLoadConditions extends LoadableComponent<PageLoadCondi
 	
 	public String getTimeStamp() {
 		
-		cal.setTime(cp3AddNewPageTime);
+		cal.setTime(AddNewPageTime);
 
 		DateFormat df = new SimpleDateFormat("ssmmddMMyyyy");
 
-		cp3AddNewPageTimeStamp = df.format(cp3AddNewPageTime);
+		AddNewPageTimeStamp = df.format(AddNewPageTime);
 		
-		return cp3AddNewPageTimeStamp;
+		return AddNewPageTimeStamp;
 		
 	}
 	

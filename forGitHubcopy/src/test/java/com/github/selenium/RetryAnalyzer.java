@@ -9,7 +9,7 @@ import org.testng.ITestResult;
 import org.testng.Reporter;
 
 /**
- * @author dtyagi
+ * @author 
  *         This is class used to try a test more than once before it's sent as a
  *         failed test in test reports
  * 

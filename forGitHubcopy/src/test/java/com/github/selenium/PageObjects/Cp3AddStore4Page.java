@@ -15,15 +15,15 @@ import org.openqa.selenium.support.PageFactory;
 import com.github.selenium.PageLoadConditions;
 
 /**
- * @author dtyagi
+ * @author 
  * 
  */
-public class Cp3AddStore4Page extends PageLoadConditions {
+public class AddStore4Page extends PageLoadConditions {
 
 	@FindBy(how = How.ID, using = "btnSubmitStore")
 	WebElement Save;
 
-	public Cp3AddStore4Page() {
+	public AddStore4Page() {
 
 		PageFactory.initElements(getDriverObject(), this);
 		this.get();
@@ -52,7 +52,7 @@ public class Cp3AddStore4Page extends PageLoadConditions {
 
 	}
 
-	public Cp3ManageStoresPage addStore() {
+	public ManageStoresPage addStore() {
 
 		//Clicking on save using jquery because this element changes position on page load
 		//So will not work on Chrome , which is fast
@@ -62,7 +62,7 @@ public class Cp3AddStore4Page extends PageLoadConditions {
 
 		//this.Save.click();
 
-		return new Cp3ManageStoresPage();
+		return new ManageStoresPage();
 	}
 
 }

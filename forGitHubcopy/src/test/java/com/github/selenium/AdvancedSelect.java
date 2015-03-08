@@ -14,7 +14,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 
 /**
- * @author dtyagi
+ * @author 
  * This is a class to imporve Selenium select functionality
  * This waits if the dropdown is loading
  *

@@ -14,23 +14,23 @@ import org.testng.annotations.Test;
 import com.github.selenium.TestSeleniumBase;
 import com.github.selenium.PageObjects.AddNewFolderPage;
 import com.github.selenium.PageObjects.LoginPage;
-import com.github.selenium.PageObjects.Cp2FolderPage;
-import com.github.selenium.PageObjects.Cp2LandingPage;
-import com.github.selenium.PageObjects.Cp2UploadFilePage;
+import com.github.selenium.PageObjects.FolderPage;
+import com.github.selenium.PageObjects.LandingPage;
+import com.github.selenium.PageObjects.UploadFilePage;
 import com.github.selenium.PageObjects.LandingPage;
 import com.github.selenium.PageObjects.TestZonePage;
 import com.github.selenium.Utility.FileDownloader;
 
 /**
- * @author dtyagi
+ * @author 
  * 
  */
-public class Cp2FolderTest extends TestSeleniumBase {
+public class FolderTest extends TestSeleniumBase {
 
 	@Test
 	/**
 	 * 
-	 * This is a test to create a CP2 Folder
+	 * This is a test to create a  Folder
 	 * 
 	 * @param website
 	 * @param username
@@ -49,16 +49,16 @@ public class Cp2FolderTest extends TestSeleniumBase {
 		LandingPage landingPage = LoginPage.login(username, password);
 		landingPage.get();
 
-		Cp2LandingPage cp2LandingPage = landingPage.getCp2LandingPage();
-		cp2LandingPage.get();
+		LandingPage LandingPage = landingPage.getLandingPage();
+		LandingPage.get();
 
-		TestZonePage testZonePage = cp2LandingPage.getTestZonePage();
+		TestZonePage testZonePage = LandingPage.getTestZonePage();
 		testZonePage.get();
 
 		AddNewFolderPage addNewFolderPage = testZonePage.getAddNewFolderPage();
 		addNewFolderPage.get();
 
-		addNewFolderPage.addCp2Folder();
+		addNewFolderPage.addFolder();
 
 		testZonePage.get();
 		assertEquals(testZonePage.getFolderLink(addNewFolderPage.getAddNewFolderPageTimeStamp()).size(), 1);
@@ -68,7 +68,7 @@ public class Cp2FolderTest extends TestSeleniumBase {
 	@Test
 	/**
 	 * 
-	 * This is a test to create CP2 folder and upload file into it
+	 * This is a test to create  folder and upload file into it
 	 * 
 	 * @param website
 	 * @param username
@@ -76,7 +76,7 @@ public class Cp2FolderTest extends TestSeleniumBase {
 	 * @throws Exception
 	 */
 	@Parameters(value = { "website", "username", "password" })
-	public void uploadAFileToCp2Folder(String website, String username, String password) throws Exception {
+	public void uploadAFileToFolder(String website, String username, String password) throws Exception {
 
 		getDriverObject().get(website);
 
@@ -86,35 +86,35 @@ public class Cp2FolderTest extends TestSeleniumBase {
 		LandingPage landingPage = LoginPage.login(username, password);
 		landingPage.get();
 
-		Cp2LandingPage cp2LandingPage = landingPage.getCp2LandingPage();
-		cp2LandingPage.get();
+		LandingPage LandingPage = landingPage.getLandingPage();
+		LandingPage.get();
 
-		TestZonePage testZonePage = cp2LandingPage.getTestZonePage();
+		TestZonePage testZonePage = LandingPage.getTestZonePage();
 		testZonePage.get();
 
 		AddNewFolderPage addNewFolderPage = testZonePage.getAddNewFolderPage();
 		addNewFolderPage.get();
 
-		addNewFolderPage.addCp2Folder();
+		addNewFolderPage.addFolder();
 
 		assertEquals(testZonePage.getFolderLink(addNewFolderPage.getAddNewFolderPageTimeStamp()).size(), 1);
 
-		Cp2FolderPage cp2FolderPage = testZonePage.getCP2FolderPage(addNewFolderPage.getAddNewFolderPageTimeStamp());
-		cp2FolderPage.get();
+		FolderPage FolderPage = testZonePage.getFolderPage(addNewFolderPage.getAddNewFolderPageTimeStamp());
+		FolderPage.get();
 
-		Cp2UploadFilePage cp2UploadFilePage = cp2FolderPage.getCp2UploadFilePage();
-		cp2UploadFilePage.get();
+		UploadFilePage UploadFilePage = FolderPage.getUploadFilePage();
+		UploadFilePage.get();
 
-		cp2UploadFilePage.uploadFile();
+		UploadFilePage.uploadFile();
 
-		assertEquals(cp2FolderPage.getFileName().size(), 1);
+		assertEquals(FolderPage.getFileName().size(), 1);
 
 	}
 
 	@Test
 	/**
 	 * 
-	 * This is a test to create and delete empty CP2 folder
+	 * This is a test to create and delete empty  folder
 	 * 
 	 * @param website
 	 * @param username
@@ -122,7 +122,7 @@ public class Cp2FolderTest extends TestSeleniumBase {
 	 * @throws Exception
 	 */
 	@Parameters(value = { "website", "username", "password" })
-	public void deleteEmptyCp2Folder(String website, String username, String password) throws Exception {
+	public void deleteEmptyFolder(String website, String username, String password) throws Exception {
 
 		getDriverObject().get(website);
 
@@ -132,23 +132,23 @@ public class Cp2FolderTest extends TestSeleniumBase {
 		LandingPage landingPage = LoginPage.login(username, password);
 		landingPage.get();
 
-		Cp2LandingPage cp2LandingPage = landingPage.getCp2LandingPage();
-		cp2LandingPage.get();
+		LandingPage LandingPage = landingPage.getLandingPage();
+		LandingPage.get();
 
-		TestZonePage testZonePage = cp2LandingPage.getTestZonePage();
+		TestZonePage testZonePage = LandingPage.getTestZonePage();
 		testZonePage.get();
 
 		AddNewFolderPage addNewFolderPage = testZonePage.getAddNewFolderPage();
 		addNewFolderPage.get();
 
-		addNewFolderPage.addCp2Folder();
+		addNewFolderPage.addFolder();
 
 		assertEquals(testZonePage.getFolderLink(addNewFolderPage.getAddNewFolderPageTimeStamp()).size(), 1);
 
-		Cp2FolderPage cp2FolderPage = testZonePage.getCP2FolderPage(addNewFolderPage.getAddNewFolderPageTimeStamp());
-		cp2FolderPage.get();
+		FolderPage FolderPage = testZonePage.getFolderPage(addNewFolderPage.getAddNewFolderPageTimeStamp());
+		FolderPage.get();
 
-		cp2FolderPage.deleteEmptyFolder();
+		FolderPage.deleteEmptyFolder();
 
 		assertEquals(testZonePage.getFolderLink(addNewFolderPage.getAddNewFolderPageTimeStamp()).size(), 0);
 
@@ -157,7 +157,7 @@ public class Cp2FolderTest extends TestSeleniumBase {
 	@Test
 	/**
 	 * 
-	 * This is a test to create a CP2 folder, upload file into it and delete it
+	 * This is a test to create a  folder, upload file into it and delete it
 	 * 
 	 * @param website
 	 * @param username
@@ -165,7 +165,7 @@ public class Cp2FolderTest extends TestSeleniumBase {
 	 * @throws Exception
 	 */
 	@Parameters(value = { "website", "username", "password" })
-	public void deleteCp2FolderWithFile(String website, String username, String password) throws Exception {
+	public void deleteFolderWithFile(String website, String username, String password) throws Exception {
 
 		getDriverObject().get(website);
 
@@ -175,33 +175,33 @@ public class Cp2FolderTest extends TestSeleniumBase {
 		LandingPage landingPage = LoginPage.login(username, password);
 		landingPage.get();
 
-		Cp2LandingPage cp2LandingPage = landingPage.getCp2LandingPage();
-		cp2LandingPage.get();
+		LandingPage LandingPage = landingPage.getLandingPage();
+		LandingPage.get();
 
-		TestZonePage testZonePage = cp2LandingPage.getTestZonePage();
+		TestZonePage testZonePage = LandingPage.getTestZonePage();
 		testZonePage.get();
 
 		AddNewFolderPage addNewFolderPage = testZonePage.getAddNewFolderPage();
 		addNewFolderPage.get();
 
-		addNewFolderPage.addCp2Folder();
+		addNewFolderPage.addFolder();
 
 		assertEquals(testZonePage.getFolderLink(addNewFolderPage.getAddNewFolderPageTimeStamp()).size(), 1);
 
-		Cp2FolderPage cp2FolderPage = testZonePage.getCP2FolderPage(addNewFolderPage.getAddNewFolderPageTimeStamp());
-		cp2FolderPage.get();
+		FolderPage FolderPage = testZonePage.getFolderPage(addNewFolderPage.getAddNewFolderPageTimeStamp());
+		FolderPage.get();
 
-		Cp2UploadFilePage cp2UploadFilePage = cp2FolderPage.getCp2UploadFilePage();
-		cp2UploadFilePage.get();
+		UploadFilePage UploadFilePage = FolderPage.getUploadFilePage();
+		UploadFilePage.get();
 
-		cp2UploadFilePage.uploadFile();
+		UploadFilePage.uploadFile();
 
-		assertEquals(cp2FolderPage.getFileName().size(), 1);
+		assertEquals(FolderPage.getFileName().size(), 1);
 
 	}
 
 	/**
-	 * This is a test to create a cp2 folder, upload file to it and then
+	 * This is a test to create a  folder, upload file to it and then
 	 * download and verify the downloaded file
 	 * 
 	 * @param website
@@ -211,7 +211,7 @@ public class Cp2FolderTest extends TestSeleniumBase {
 	 */
 	@Test
 	@Parameters(value = { "website", "username", "password" })
-	public void downloadAFileToCp2FolderBeta(String website, String username, String password) throws Exception {
+	public void downloadAFileToFolderBeta(String website, String username, String password) throws Exception {
 
 		getDriverObject().get(website);
 
@@ -221,32 +221,32 @@ public class Cp2FolderTest extends TestSeleniumBase {
 		LandingPage landingPage = LoginPage.login(username, password);
 		landingPage.get();
 
-		Cp2LandingPage cp2LandingPage = landingPage.getCp2LandingPage();
-		cp2LandingPage.get();
+		LandingPage LandingPage = landingPage.getLandingPage();
+		LandingPage.get();
 
-		TestZonePage testZonePage = cp2LandingPage.getTestZonePage();
+		TestZonePage testZonePage = LandingPage.getTestZonePage();
 		testZonePage.get();
 
 		AddNewFolderPage addNewFolderPage = testZonePage.getAddNewFolderPage();
 		addNewFolderPage.get();
 
-		addNewFolderPage.addCp2Folder();
+		addNewFolderPage.addFolder();
 
 		assertEquals(testZonePage.getFolderLink(addNewFolderPage.getAddNewFolderPageTimeStamp()).size(), 1);
 
-		Cp2FolderPage cp2FolderPage = testZonePage.getCP2FolderPage(addNewFolderPage.getAddNewFolderPageTimeStamp());
-		cp2FolderPage.get();
+		FolderPage FolderPage = testZonePage.getFolderPage(addNewFolderPage.getAddNewFolderPageTimeStamp());
+		FolderPage.get();
 
-		Cp2UploadFilePage cp2UploadFilePage = cp2FolderPage.getCp2UploadFilePage();
-		cp2UploadFilePage.get();
+		UploadFilePage UploadFilePage = FolderPage.getUploadFilePage();
+		UploadFilePage.get();
 
-		cp2UploadFilePage.uploadFile();
+		UploadFilePage.uploadFile();
 
-		assertEquals(cp2FolderPage.getFileName().size(), 1);
+		assertEquals(FolderPage.getFileName().size(), 1);
 
 		FileDownloader fileDownloader = new FileDownloader(getDriverObject());
 
-		fileDownloader.setURI(cp2FolderPage.getFileDownloadLink());
+		fileDownloader.setURI(FolderPage.getFileDownloadLink());
 
 		File secretFile = fileDownloader.downloadFile();
 

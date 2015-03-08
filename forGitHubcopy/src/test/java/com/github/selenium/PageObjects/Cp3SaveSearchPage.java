@@ -17,10 +17,10 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import com.github.selenium.PageLoadConditions;
 
 /**
- * @author dtyagi
+ * @author 
  * 
  */
-public class Cp3SaveSearchPage extends PageLoadConditions {
+public class SaveSearchPage extends PageLoadConditions {
 
 	@FindBy(how = How.ID, using = "saveSearch")
 	WebElement SaveSearchModal;
@@ -34,7 +34,7 @@ public class Cp3SaveSearchPage extends PageLoadConditions {
 	@FindBy(how = How.CLASS_NAME, using = "icon-ok")
 	WebElement Save;
 
-	public Cp3SaveSearchPage() {
+	public SaveSearchPage() {
 
 		PageFactory.initElements(getDriverObject(), this);
 

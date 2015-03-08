@@ -13,10 +13,10 @@ import org.openqa.selenium.support.ui.LoadableComponent;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 /**
- * @author dtyagi Class to represent Cp2 Upload File Page
+ * @author  Class to represent  Upload File Page
  * 
  */
-public class Cp2UploadFilePage extends LoadableComponent<Cp2UploadFilePage> {
+public class UploadFilePage extends LoadableComponent<UploadFilePage> {
 
 	@FindBy(how = How.ID, using = "MainScreen")
 	WebElement MainScreenFrame;
@@ -36,7 +36,7 @@ public class Cp2UploadFilePage extends LoadableComponent<Cp2UploadFilePage> {
 	/**
 	 * 
 	 */
-	public Cp2UploadFilePage() {
+	public UploadFilePage() {
 		PageFactory.initElements(getDriverObject(), this);
 	}
 

@@ -15,10 +15,10 @@ import com.github.selenium.AdvancedSelect;
 import com.github.selenium.PageLoadConditions;
 
 /**
- * @author dtyagi
+ * @author 
  * 
  */
-public class Cp3Page extends PageLoadConditions {
+public class Page extends PageLoadConditions {
 
 	@FindBy(how = How.CLASS_NAME, using = "storyGroupsHolder")
 	WebElement MainPanel;
@@ -26,7 +26,7 @@ public class Cp3Page extends PageLoadConditions {
 	@FindBy(how = How.ID, using = "publishOptions")
 	WebElement Action;
 
-	public Cp3Page() {
+	public Page() {
 
 		PageFactory.initElements(getDriverObject(), this);
 		this.get();
@@ -57,11 +57,11 @@ public class Cp3Page extends PageLoadConditions {
 
 	}
 
-	public Cp3DraftPage editPage() {
+	public DraftPage editPage() {
 
 		new AdvancedSelect(Action).selectByValue("edit-page");
 
-		return new Cp3DraftPage();
+		return new DraftPage();
 	}
 
 }

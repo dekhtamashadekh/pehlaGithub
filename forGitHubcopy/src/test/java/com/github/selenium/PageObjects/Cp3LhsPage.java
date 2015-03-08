@@ -15,11 +15,11 @@ import com.github.selenium.AdvancedSelect;
 import com.github.selenium.PageLoadConditions;
 
 /**
- * @author dtyagi
+ * @author 
  * 
  */
 
-public class Cp3LhsPage extends PageLoadConditions {
+public class LhsPage extends PageLoadConditions {
 
 	@FindBy(how = How.CSS, using = "#filterPanel.active")
 	WebElement PanelExpanded;
@@ -47,7 +47,7 @@ public class Cp3LhsPage extends PageLoadConditions {
 	@FindBy(how = How.CLASS_NAME, using = "navigator-container")
 	WebElement SubFolderSelector;
 
-	public Cp3LhsPage() {
+	public LhsPage() {
 		PageFactory.initElements(getDriverObject(), this);
 		this.get();
 
@@ -88,11 +88,11 @@ public class Cp3LhsPage extends PageLoadConditions {
 	 * @throws InterruptedException
 	 */
 
-	public Cp3SubfolderSelectorPanelPage getCp3SubfolderSelectorPanelPage() throws InterruptedException {
+	public SubfolderSelectorPanelPage getSubfolderSelectorPanelPage() throws InterruptedException {
 
 		new AdvancedSelect(this.SelectZoneDropDown).selectByIndex(2);
 
-		return new Cp3SubfolderSelectorPanelPage();
+		return new SubfolderSelectorPanelPage();
 
 	}
 
@@ -100,10 +100,10 @@ public class Cp3LhsPage extends PageLoadConditions {
 	 * @return
 	 */
 
-	public Cp3SaveSearchPage getCp3SaveSearchPage() {
+	public SaveSearchPage getSaveSearchPage() {
 
 		this.SaveSearchButton.click();
-		return new Cp3SaveSearchPage();
+		return new SaveSearchPage();
 
 	}
 
@@ -111,11 +111,11 @@ public class Cp3LhsPage extends PageLoadConditions {
 	 * @return
 	 */
 
-	public Cp3MySavedSearchPage getCp3MySavedSearchPage() {
+	public MySavedSearchPage getMySavedSearchPage() {
 
 		this.MySaveSearchButton.click();
 
-		return new Cp3MySavedSearchPage();
+		return new MySavedSearchPage();
 
 	}
 

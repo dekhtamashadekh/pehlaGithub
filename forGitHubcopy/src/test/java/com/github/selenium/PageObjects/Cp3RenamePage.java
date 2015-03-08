@@ -14,10 +14,10 @@ import org.openqa.selenium.support.PageFactory;
 import com.github.selenium.PageLoadConditions;
 
 /**
- * @author dtyagi
+ * @author 
  * 
  */
-public class Cp3RenamePage extends PageLoadConditions {
+public class RenamePage extends PageLoadConditions {
 
 	@FindBy(how = How.ID, using = "renamed-page-title")
 	WebElement InputField;
@@ -25,7 +25,7 @@ public class Cp3RenamePage extends PageLoadConditions {
 	@FindBy(how = How.XPATH, using = "//div[@class='modal-footer']/button[@id='save-rename-page']")
 	WebElement Save;
 
-	public Cp3RenamePage() {
+	public RenamePage() {
 
 		PageFactory.initElements(getDriverObject(), this);
 
@@ -58,7 +58,7 @@ public class Cp3RenamePage extends PageLoadConditions {
 
 	}
 
-	public Cp3DraftPage renamePage(String name) {
+	public DraftPage renamePage(String name) {
 
 		InputField.click();
 
@@ -68,7 +68,7 @@ public class Cp3RenamePage extends PageLoadConditions {
 
 		Save.click();
 
-		return new Cp3DraftPage();
+		return new DraftPage();
 
 	}
 

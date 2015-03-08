@@ -18,7 +18,7 @@ import org.openqa.selenium.support.ui.LoadableComponent;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 /**
- * @author dtyagi Class to represent Edit User Page
+ * @author  Class to represent Edit User Page
  * 
  */
 public class EditUserPage extends LoadableComponent<EditUserPage> {

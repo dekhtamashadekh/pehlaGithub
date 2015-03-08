@@ -19,7 +19,7 @@ import com.github.selenium.PageLoadConditions;
 import com.github.selenium.TestSeleniumBase;
 
 /**
- * @author dtyagi
+ * @author 
  * 
  */
 public class LandingPage extends PageLoadConditions {
@@ -54,8 +54,8 @@ public class LandingPage extends PageLoadConditions {
 	@FindBy(how = How.ID, using = "publishOptions")
 	WebElement ActionDropdown;
 
-	@FindBy(how = How.CSS, using = "a > img[title ^='CP2']")
-	WebElement cp2Link;
+	@FindBy(how = How.CSS, using = "a > img[title ^='']")
+	WebElement Link;
 
 	public LandingPage() {
 		PageFactory.initElements(getDriverObject(), this);
@@ -97,11 +97,11 @@ public class LandingPage extends PageLoadConditions {
 	/**
 	 * @return
 	 */
-	public Cp2LandingPage getCp2LandingPage() {
+	public LandingPage getLandingPage() {
 
-		this.cp2Link.click();
+		this.Link.click();
 
-		return new Cp2LandingPage();
+		return new LandingPage();
 
 	}
 
@@ -142,11 +142,11 @@ public class LandingPage extends PageLoadConditions {
 	 * @return
 	 * @throws InterruptedException
 	 */
-	public Cp3RhsPage getCp3RhsPage() throws InterruptedException {
+	public RhsPage getRhsPage() throws InterruptedException {
 
 		this.rhsExpander.click();
 
-		return new Cp3RhsPage();
+		return new RhsPage();
 
 	}
 
@@ -154,25 +154,25 @@ public class LandingPage extends PageLoadConditions {
 	 * @return
 	 * @throws InterruptedException
 	 */
-	public Cp3LhsPage getCp3LhsPage() throws InterruptedException {
+	public LhsPage getLhsPage() throws InterruptedException {
 
 		this.lhsExpander.click();
 
-		return new Cp3LhsPage();
+		return new LhsPage();
 
 	}
 
-	public Cp3AdminPage getCp3AdminPage() {
+	public AdminPage getAdminPage() {
 
 		this.Administration.click();
 
-		return new Cp3AdminPage();
+		return new AdminPage();
 
 	}
 
-	public Cp3CommPage getCp3CommPage() {
+	public CommPage getCommPage() {
 
-		return new Cp3CommPage();
+		return new CommPage();
 
 	}
 

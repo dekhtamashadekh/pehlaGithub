@@ -18,7 +18,7 @@ import org.openqa.selenium.support.ui.LoadableComponent;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 /**
- * @author dtyagi Class to represent  CP2 Add New Folder Page
+ * @author  Class to represent   Add New Folder Page
  * 
  */
 public class AddNewFolderPage extends LoadableComponent<AddNewFolderPage> {
@@ -93,10 +93,10 @@ public class AddNewFolderPage extends LoadableComponent<AddNewFolderPage> {
 	}
 
 	/**
-	 * Creates the CP2 folder
+	 * Creates the  folder
 	 * 
 	 */
-	public void addCp2Folder() {
+	public void addFolder() {
 
 		this.FolderName.sendKeys("TestAutoFolder" + addNewFolderPageTimeStamp);
 

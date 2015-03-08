@@ -9,20 +9,20 @@ import org.testng.annotations.Test;
 
 import com.github.selenium.TestSeleniumBase;
 import com.github.selenium.PageObjects.LoginPage;
-import com.github.selenium.PageObjects.Cp3AddCommPage;
-import com.github.selenium.PageObjects.Cp3AddStore1Page;
-import com.github.selenium.PageObjects.Cp3AddStore2Page;
-import com.github.selenium.PageObjects.Cp3AddStore3Page;
-import com.github.selenium.PageObjects.Cp3AddStore4Page;
-import com.github.selenium.PageObjects.Cp3CommPage;
-import com.github.selenium.PageObjects.Cp3ManageStoresPage;
+import com.github.selenium.PageObjects.AddCommPage;
+import com.github.selenium.PageObjects.AddStore1Page;
+import com.github.selenium.PageObjects.AddStore2Page;
+import com.github.selenium.PageObjects.AddStore3Page;
+import com.github.selenium.PageObjects.AddStore4Page;
+import com.github.selenium.PageObjects.CommPage;
+import com.github.selenium.PageObjects.ManageStoresPage;
 import com.github.selenium.PageObjects.LandingPage;
 
-public class Cp3CommTest extends TestSeleniumBase {
+public class CommTest extends TestSeleniumBase {
 
 	@Test(groups = {"noSafari"})
 	@Parameters(value = { "website", "username", "password" })
-	public void cp3AddAnnouncement(String website, String username, String password) throws Exception {
+	public void AddAnnouncement(String website, String username, String password) throws Exception {
 
 		getDriverObject().get(website);
 
@@ -32,21 +32,21 @@ public class Cp3CommTest extends TestSeleniumBase {
 
 		getDriverObject().get(website + "core/root/index.cfm?pageId=storeComms&page_layout=vintage");
 
-		Cp3CommPage cp3CommPage = landingPage.getCp3CommPage();
+		CommPage CommPage = landingPage.getCommPage();
 
-		Cp3AddCommPage cp3AddCommPage = cp3CommPage.getCp3AddCommPage();
+		AddCommPage AddCommPage = CommPage.getAddCommPage();
 		
 		int random = new Random().nextInt(90);
 
-		cp3AddCommPage.addAnnouncement(random,cp3AddCommPage.getTimeStamp());
+		AddCommPage.addAnnouncement(random,AddCommPage.getTimeStamp());
 		
-		assertTrue(cp3CommPage.searchCommunication(random+cp3AddCommPage.getTimeStamp()).size()>0);
+		assertTrue(CommPage.searchCommunication(random+AddCommPage.getTimeStamp()).size()>0);
 
 	}
 	
 	//@Test(groups = {"noSafari"})
 	@Parameters(value = { "website", "username", "password" })
-	public void cp3AddSPAnn(String website, String username, String password) throws Exception {
+	public void AddSPAnn(String website, String username, String password) throws Exception {
 
 		getDriverObject().get(website);
 
@@ -56,21 +56,21 @@ public class Cp3CommTest extends TestSeleniumBase {
 
 		getDriverObject().get(website + "core/root/index.cfm?pageId=storeComms&page_layout=vintage");
 
-		Cp3CommPage cp3CommPage = landingPage.getCp3CommPage();
+		CommPage CommPage = landingPage.getCommPage();
 
-		Cp3AddCommPage cp3AddCommPage = cp3CommPage.getCp3AddCommPage();
+		AddCommPage AddCommPage = CommPage.getAddCommPage();
 		
 		int random = new Random().nextInt(90);
 
-		cp3AddCommPage.addAnnouncement(random,cp3AddCommPage.getTimeStamp()+"£%^%&^");
+		AddCommPage.addAnnouncement(random,AddCommPage.getTimeStamp()+"£%^%&^");
 		
-		assertTrue(cp3CommPage.searchCommunication(random+cp3AddCommPage.getTimeStamp()+"£%^%&^").size()>0);
+		assertTrue(CommPage.searchCommunication(random+AddCommPage.getTimeStamp()+"£%^%&^").size()>0);
 
 	}
 	
 	@Test
 	@Parameters(value = { "website", "username", "password" })
-	public void cp3AddStore(String website, String username, String password) throws Exception {
+	public void AddStore(String website, String username, String password) throws Exception {
 
 		getDriverObject().get(website);
 
@@ -80,28 +80,28 @@ public class Cp3CommTest extends TestSeleniumBase {
 
 		getDriverObject().get(website + "core/root/index.cfm?pageId=storeComms&page_layout=vintage");
 
-		Cp3CommPage cp3CommPage = landingPage.getCp3CommPage();
+		CommPage CommPage = landingPage.getCommPage();
 		
-		Cp3ManageStoresPage cp3ManageStoresPage = cp3CommPage.getCp3ManageStoresPage();
+		ManageStoresPage ManageStoresPage = CommPage.getManageStoresPage();
 		
-		Cp3AddStore1Page cp3AddStore1Page = cp3ManageStoresPage.getCp3AddStore1Page();
+		AddStore1Page AddStore1Page = ManageStoresPage.getAddStore1Page();
 		
-		Cp3AddStore2Page cp3AddStore2Page = cp3AddStore1Page.addStoreName(cp3AddStore1Page.getTimeStamp());
+		AddStore2Page AddStore2Page = AddStore1Page.addStoreName(AddStore1Page.getTimeStamp());
 		
-		Cp3AddStore3Page cp3AddStore3Page = cp3AddStore2Page.getCp3AddStore3Page();
+		AddStore3Page AddStore3Page = AddStore2Page.getAddStore3Page();
 	
-		Cp3AddStore4Page cp3AddStore4Page = cp3AddStore3Page.getCp3AddStore4Page();
+		AddStore4Page AddStore4Page = AddStore3Page.getAddStore4Page();
 		
-		cp3AddStore4Page.addStore();
+		AddStore4Page.addStore();
 	
-		assertTrue(cp3ManageStoresPage.searchStore(cp3AddStore1Page.getTimeStamp()).size()>0);
+		assertTrue(ManageStoresPage.searchStore(AddStore1Page.getTimeStamp()).size()>0);
 		
 
 	}
 	
 	@Test
 	@Parameters(value = { "website", "username", "password" })
-	public void cp3AddSPStore(String website, String username, String password) throws Exception {
+	public void AddSPStore(String website, String username, String password) throws Exception {
 
 		getDriverObject().get(website);
 
@@ -111,28 +111,28 @@ public class Cp3CommTest extends TestSeleniumBase {
 
 		getDriverObject().get(website + "core/root/index.cfm?pageId=storeComms&page_layout=vintage");
 
-		Cp3CommPage cp3CommPage = landingPage.getCp3CommPage();
+		CommPage CommPage = landingPage.getCommPage();
 		
-		Cp3ManageStoresPage cp3ManageStoresPage = cp3CommPage.getCp3ManageStoresPage();
+		ManageStoresPage ManageStoresPage = CommPage.getManageStoresPage();
 		
-		Cp3AddStore1Page cp3AddStore1Page = cp3ManageStoresPage.getCp3AddStore1Page();
+		AddStore1Page AddStore1Page = ManageStoresPage.getAddStore1Page();
 		
-		Cp3AddStore2Page cp3AddStore2Page = cp3AddStore1Page.addStoreName(cp3AddStore1Page.getTimeStamp()+"£%^%&^");
+		AddStore2Page AddStore2Page = AddStore1Page.addStoreName(AddStore1Page.getTimeStamp()+"£%^%&^");
 		
-		Cp3AddStore3Page cp3AddStore3Page = cp3AddStore2Page.getCp3AddStore3Page();
+		AddStore3Page AddStore3Page = AddStore2Page.getAddStore3Page();
 	
-		Cp3AddStore4Page cp3AddStore4Page = cp3AddStore3Page.getCp3AddStore4Page();
+		AddStore4Page AddStore4Page = AddStore3Page.getAddStore4Page();
 		
-		cp3AddStore4Page.addStore();
+		AddStore4Page.addStore();
 	
-		assertTrue(cp3ManageStoresPage.searchStore(cp3AddStore1Page.getTimeStamp()+"£%^%&^").size()>0);
+		assertTrue(ManageStoresPage.searchStore(AddStore1Page.getTimeStamp()+"£%^%&^").size()>0);
 		
 
 	}
 	
 	@Test
 	@Parameters(value = { "website", "username", "password" })
-	public void cp3AddInvalidStore(String website, String username, String password) throws Exception {
+	public void AddInvalidStore(String website, String username, String password) throws Exception {
 
 		getDriverObject().get(website);
 
@@ -142,15 +142,15 @@ public class Cp3CommTest extends TestSeleniumBase {
 
 		getDriverObject().get(website + "core/root/index.cfm?pageId=storeComms&page_layout=vintage");
 
-		Cp3CommPage cp3CommPage = landingPage.getCp3CommPage();
+		CommPage CommPage = landingPage.getCommPage();
 		
-		Cp3ManageStoresPage cp3ManageStoresPage = cp3CommPage.getCp3ManageStoresPage();
+		ManageStoresPage ManageStoresPage = CommPage.getManageStoresPage();
 		
-		Cp3AddStore1Page cp3AddStore1Page = cp3ManageStoresPage.getCp3AddStore1Page();
+		AddStore1Page AddStore1Page = ManageStoresPage.getAddStore1Page();
 		
 		
 		
-		assertTrue("Some or all expected message not displayed",cp3AddStore1Page.addNoName("").size()==5);
+		assertTrue("Some or all expected message not displayed",AddStore1Page.addNoName("").size()==5);
 		
 	}
 	

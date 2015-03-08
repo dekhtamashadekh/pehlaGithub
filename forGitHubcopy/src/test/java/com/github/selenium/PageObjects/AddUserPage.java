@@ -21,7 +21,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import com.github.selenium.AdvancedSelect;
 
 /**
- * @author dtyagi Class to represent  CP2 Add User Page
+ * @author  Class to represent   Add User Page
  * 
  */
 public class AddUserPage extends LoadableComponent<AddUserPage> {

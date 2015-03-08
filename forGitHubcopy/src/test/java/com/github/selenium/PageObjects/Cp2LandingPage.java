@@ -15,10 +15,10 @@ import org.openqa.selenium.support.ui.LoadableComponent;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 /**
- * @author dtyagi Class to represent Cp2 Landing Page
+ * @author  Class to represent  Landing Page
  * 
  */
-public class Cp2LandingPage extends LoadableComponent<Cp2LandingPage> {
+public class LandingPage extends LoadableComponent<LandingPage> {
 
 	@FindBy(how = How.ID, using = "HeaderFrame")
 	WebElement HeaderFrameElement;
@@ -32,7 +32,7 @@ public class Cp2LandingPage extends LoadableComponent<Cp2LandingPage> {
 	/**
 	 * 
 	 */
-	public Cp2LandingPage() {
+	public LandingPage() {
 		PageFactory.initElements(getDriverObject(), this);
 	}
 

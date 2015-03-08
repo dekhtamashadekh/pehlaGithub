@@ -8,12 +8,12 @@ import com.github.selenium.TestSeleniumBase;
 import com.github.selenium.PageObjects.AddUserPage;
 import com.github.selenium.PageObjects.AdminPage;
 import com.github.selenium.PageObjects.LoginPage;
-import com.github.selenium.PageObjects.Cp2LandingPage;
+import com.github.selenium.PageObjects.LandingPage;
 import com.github.selenium.PageObjects.LandingPage;
 import com.github.selenium.PageObjects.UserPage;
 
 /**
- * @author dtyagi
+ * @author 
  * 
  */
 public class UserTest extends TestSeleniumBase {
@@ -43,13 +43,13 @@ public class UserTest extends TestSeleniumBase {
 		
 		System.out.println("delete after use 1");
 
-		Cp2LandingPage cp2LandingPage = landingPage.getCp2LandingPage();
+		LandingPage LandingPage = landingPage.getLandingPage();
 
-		cp2LandingPage.get();
+		LandingPage.get();
 		
 		System.out.println("delete after use 2");
 
-		AdminPage AdminPage = cp2LandingPage.getAdminPage();
+		AdminPage AdminPage = LandingPage.getAdminPage();
 		
 		System.out.println("delete after use 3");
 
@@ -91,9 +91,9 @@ public class UserTest extends TestSeleniumBase {
 
 		LandingPage landingPage = LoginPage.login(username, password);
 
-		Cp2LandingPage cp2LandingPage = landingPage.getCp2LandingPage();
+		LandingPage LandingPage = landingPage.getLandingPage();
 
-		AdminPage AdminPage = cp2LandingPage.getAdminPage();
+		AdminPage AdminPage = LandingPage.getAdminPage();
 
 		AddUserPage addUserPage = AdminPage.getAddUserPage();
 

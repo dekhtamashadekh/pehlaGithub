@@ -15,10 +15,10 @@ import org.openqa.selenium.support.PageFactory;
 import com.github.selenium.PageLoadConditions;
 
 /**
- * @author dtyagi
+ * @author 
  * 
  */
-public class Cp3PublishedPage extends PageLoadConditions {
+public class PublishedPage extends PageLoadConditions {
 
 	@FindBy(how = How.ID, using = "publishOptions")
 	@CacheLookup
@@ -49,7 +49,7 @@ public class Cp3PublishedPage extends PageLoadConditions {
 	@FindBy(how = How.ID, using = "page-actions")
 	WebElement PageActions;
 
-	public Cp3PublishedPage() {
+	public PublishedPage() {
 
 		PageFactory.initElements(getDriverObject(), this);
 

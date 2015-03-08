@@ -20,7 +20,7 @@ import org.openqa.selenium.support.ui.LoadableComponent;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 /**
- * @author dtyagi Class to represent  CP2 Add Group page
+ * @author  Class to represent   Add Group page
  * 
  */
 public class AddGroupPage extends LoadableComponent<AddGroupPage> {

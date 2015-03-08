@@ -15,17 +15,17 @@ import org.openqa.selenium.support.PageFactory;
 import com.github.selenium.PageLoadConditions;
 
 /**
- * @author dtyagi
+ * @author 
  * 
  */
-public class Cp3UserGroupPage extends PageLoadConditions {
+public class UserGroupPage extends PageLoadConditions {
 	
 	@FindBy(how = How.ID, using = "addGroup")
 	WebElement AddNewUserGroup;
 
 	
 
-	public Cp3UserGroupPage() {
+	public UserGroupPage() {
 
 		PageFactory.initElements(getDriverObject(), this);
 		this.get();
@@ -55,11 +55,11 @@ public class Cp3UserGroupPage extends PageLoadConditions {
 	}
 	
 	
-	public Cp3AddNewGroupPage getCp3AddNewGroupPage() {
+	public AddNewGroupPage getAddNewGroupPage() {
 		
 		this.AddNewUserGroup.click();
 		
-		return new Cp3AddNewGroupPage();
+		return new AddNewGroupPage();
 		
 	}
 	

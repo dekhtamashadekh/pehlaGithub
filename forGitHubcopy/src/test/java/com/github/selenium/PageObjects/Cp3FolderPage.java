@@ -15,10 +15,10 @@ import org.openqa.selenium.support.PageFactory;
 import com.github.selenium.PageLoadConditions;
 
 /**
- * @author dtyagi
+ * @author 
  * 
  */
-public class Cp3FolderPage extends PageLoadConditions {
+public class FolderPage extends PageLoadConditions {
 
 	@FindBy(how = How.CLASS_NAME, using = "vaultView")
 	WebElement SubFolder;
@@ -29,7 +29,7 @@ public class Cp3FolderPage extends PageLoadConditions {
 	@FindBy(how = How.ID, using = "vaultActions")
 	WebElement ActionDropdown;
 
-	public Cp3FolderPage() {
+	public FolderPage() {
 		PageFactory.initElements(getDriverObject(), this);
 		this.get();
 

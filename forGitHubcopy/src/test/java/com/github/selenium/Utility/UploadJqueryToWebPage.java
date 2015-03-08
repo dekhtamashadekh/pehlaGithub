@@ -13,7 +13,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import com.github.selenium.TestSeleniumBase;
 
 /**
- * @author dtyagi
+ * @author 
  * 
  *         This is a class to load JQuery in webpage
  * 

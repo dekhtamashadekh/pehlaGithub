@@ -15,10 +15,10 @@ import com.github.selenium.PageObjects.LandingPage;
 import com.github.selenium.Utility.FileDownloader;
 
 /**
- * @author dtyagi
+ * @author 
  * 
  */
-public class Cp3DownloadTest extends TestSeleniumBase {
+public class DownloadTest extends TestSeleniumBase {
 
 	@Test
 	/**
